@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <limits.h>
 
@@ -71,25 +70,24 @@ void find_max_and_count(int n) {
 }
 // Последовательности
 void sequence(int n) {
-    int spisok[n];
     int increse = 1;
     int decrease = 1;
     int equal = 1;
+    int prevue;
+    int currently;
 
-    for (int i =0;i<n; ++i) {
-        int a;
-        scanf("%i", &a);
-        spisok[i] = a;
-    }
+    scanf("%i", &prevue);
 
-    for (int i = 0;i<n-1; ++i) {
-        if (spisok[i]>spisok[i+1]||spisok[i]==spisok[i+1]) {
+
+    for (int i =1;i<n; ++i) {
+        scanf("%i", &currently);
+        if (prevue>currently || prevue == currently) {
             increse = 0;
         }
-        if (spisok[i]<spisok[i+1]||spisok[i]==spisok[i+1]) {
+        if (prevue<currently || prevue == currently) {
             decrease = 0;
         }
-        if (spisok[i]!=spisok[i+1]) {
+        if (prevue!=currently) {
             equal = 0;
         }
     }
@@ -105,7 +103,10 @@ void sequence(int n) {
     else {
         printf("None");
     }
+    prevue = currently;
 }
+
+
 
 int main(){
     int n;
