@@ -23,6 +23,4 @@ int main() {
 
     free(node1);
     free(node2);
-
-    return 0;
 }
