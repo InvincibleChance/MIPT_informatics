@@ -4,7 +4,7 @@
 &pi - stack
 pi - heap
 pi+5 - heap
-&s - data  по идее мы же обявляем как const поэтому должен быть в main как дата храниться, ан не в stack
+&s - data  по идее мы же объявляем как const, поэтому должен в main как дата храниться, ан не в stack.
 s - data    ---
 &ps - stack
 ps - text
