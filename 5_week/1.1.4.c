@@ -26,6 +26,4 @@ int main() {
     print_book(p);
 
     free(p);
-
-    return 0;
 }
