@@ -18,12 +18,7 @@ void print_book(Book *b) {
 
 int main() {
     Book *p = (Book *)malloc(sizeof(Book));
-
-    if (p == NULL) {
-        printf("Ошибка выделения памяти.\n");
-        return 1;
-    }
-
+    
     strcpy(p->title, "Don Quixote");
     p->pages = 1000;
     p->price = 750.0;
