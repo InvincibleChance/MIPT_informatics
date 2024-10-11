@@ -10,7 +10,6 @@ struct book {
 
 typedef struct book Book;
 
-// Функция для печати структуры Book
 void print_book(Book *b) {
     printf("Title: %s\n", b->title);
     printf("Pages: %d\n", b->pages);
@@ -18,7 +17,6 @@ void print_book(Book *b) {
 }
 
 int main() {
-    // Выделяем память в куче для структуры Book
     Book *p = (Book *)malloc(sizeof(Book));
 
     if (p == NULL) {
@@ -26,15 +24,12 @@ int main() {
         return 1;
     }
 
-    // Инициализация данных структуры
     strcpy(p->title, "Don Quixote");
     p->pages = 1000;
     p->price = 750.0;
 
-    // Печать структуры
     print_book(p);
 
-    // Освобождение памяти
     free(p);
 
     return 0;
