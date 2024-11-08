@@ -19,7 +19,7 @@ using mipt::frtk::print;
 
 
 int main() {
-    Point p = {10, 20}; // Создание переменной типа Point
-    print(p); // Вызов функции print
+    Point p = {10, 20}; 
+    print(p); 
     return 0;
 }
